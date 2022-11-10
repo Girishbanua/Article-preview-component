@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700&display=swap');
+:root{
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{    
+    display: grid;
+    place-content: center;
+    background: var(--Light-Grayish-Blue);
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+}
+.container{    
+    background: white;   
+    margin: 75px 25px;
+    border-radius: 10px;
+}
+.left{
+    max-height: 200px;
+    overflow: hidden;    
+}
+.left img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.right{
+    padding: 2.2rem 1.9rem 1rem;
+}
+.right h1{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+.right article{
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--Desaturated-Dark-Blue);
+    margin-top: 1rem;    
+    line-height: 1.5;
+}
+.thirdDiv{
+    display: flex;
+    margin-top: 1.5rem;  
+    align-items: center;   
+    justify-content: space-between;
+}
+.admin{
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+}
+.admin img{
+    width: 17%;        
+    border-radius: 50%;
+}
+.admin h3{
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.admin p{
+    color: var(--Desaturated-Dark-Blue);
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.share-icon{
+    background: var(--Light-Grayish-Blue);
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.share{
+    display: flex;
+    background: var(--Very-Dark-Grayish-Blue);
+    color: var(--Grayish-Blue);        
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    margin: 1.5rem -1.9rem -1rem;
+    overflow: visible;
+    padding: 1rem;    
+}
+.inactive{
+    display: none;    
+}
+.share p{
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-weight: 500;
+}
+.sharing-apps{
+    display: flex;
+    gap: 0.65rem;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/*Desktop view*/
+@media screen and (min-width: 600px) {
+    .container{
+        margin: 15.625rem 20rem 5rem;      
+        display: flex;
+    }
+    .left{  
+        max-height: 100%;
+        min-width: 30%;
+        overflow: visible;           
+        display: flex;              
+    }
+    .left img{        
+        border-radius: 10px 0 0 10px;        
+    }
+    .right{        
+        padding: 2rem 2.5rem 1rem 2rem;
+        position: relative;
+    }
+    .right h1{
+        font-size: 1.6em;
+        font-weight: 700;
+    }
+    .right article{
+        font-size: 1.09em;
+        font-weight: 500;                
+    }
+    .share{
+        display: none;
+        position: absolute;
+        width: auto;
+        top: 45%;
+        right: 0;
+        border-radius: 10px;
+    }
+    .share button{
+        display: none;
+    }
+}
+/*
+PC view
+----------
+Container-margin: 250px 740px;
+container-width: 750px;
+contianer-height: 280px;
+
+main-image-width: 300px;
+
+mani-image & text margin: 40px;
+
+text-div margin: 40px 40px 30px 40px;
+
+gap between h1 and p text- 20px;
+
+gap between p and admin: 25px;
+
+gap between admin and share button: 150px;  
+---------------------------------------------
+mobile- view
+-------------
+container margin: 75px 25px;
+container height: 510px; width: 325px;
+
+main-image height: 200px;
+
+right-div
+height: 310px;
+padding: 35px 30px 15px; 
+
+gap between h1 and p: 15px;
+gap between p and admin: 25px;
+
+active state height: 65px;
+
+Share-Div width: 250px; height: 55px;
+*/

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Article preview component</title>
+
+    <link rel="stylesheet" href="styles.css">
+ 
+  </head>
+<body>
+  <main>
+    <div class="container">
+
+      <div class="left">
+        <img src="./images/drawers.jpg" alt="main image ">
+      </div>
+      <!--RIGHT BOX Start-->
+      <div class="right">
+        <!--Main Heading and description Div-->
+        <div class="description">
+          <header>
+            <h1>Shift the overall look and feel by adding these wonderful 
+            touches to furniture in your home</h1>
+          </header>
+          <article>
+            Ever been in a room and felt like something was missing? Perhaps 
+            it felt slightly bare and uninviting. I've got some simple tips 
+            to help you make any room feel complete.
+          </article>
+        </div>
+        <!--Admin div with image, name and share-button-->
+        <div class="thirdDiv active">
+          <div class="admin">         
+            <img src="./images/avatar-michelle.jpg" alt="avatar">          
+            <text>
+              <h3>Michelle Appleton</h3>
+              <p>28 Jun 2020</p>
+            </text>  
+          </div>
+          <!--Sharing button-->
+          <button class="share-icon" onclick="toggleDisplay()" ondblclick="toggleDisplay2()">
+            <img src="./images/icon-share.svg" alt="share">
+          </button>
+        </div>        
+        <div class="share inactive">
+          <div class="sharing-apps">
+            <p>Share</p>        
+            <a href="https://facebook.com" target="_blank">
+              <img src="./images/icon-facebook.svg" 
+              alt="icon-facebook" 
+              aria-hidden="true">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <img src="./images/icon-twitter.svg" 
+              alt="icon-twitter" 
+              aria-hidden="true">
+            </a>
+            <a href="https://pinterest.com" target="_blank">
+              <img src="./images/icon-pinterest.svg" 
+              alt="icon-pinterest" 
+              aria-hidden="true">
+            </a>
+          </div>
+          <button class="share-icon" onclick="toggleDisplay2()">
+              <img src="./images/icon-share.svg" alt="share">
+          </button>
+        </div>
+      </div>
+     
+    </div>
+  </main>      
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#" target="_blank">Girish Chandra Banua</a>.
+    </div>
+  </footer>
+
+  <script>
+    const share = document.querySelector(".inactive");
+    const noShare = document.querySelector(".active");
+
+    if(window.innerWidth <= 600){
+      function toggleDisplay(){
+        share.style.display = "flex";      
+        noShare.style.display = "none";
+      }
+      function toggleDisplay2(){
+        share.style.display = "none";
+        noShare.style.display = "flex";
+      }
+    }else{
+        function toggleDisplay(){           
+          console.log("clicked") ;
+          share.style.display="flex";
+        }
+        function toggleDisplay2(){
+          share.style.display = "none";
+        }
+    }
+    
+  </script>
+</body></html>
